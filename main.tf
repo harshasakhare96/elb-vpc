@@ -2,6 +2,10 @@ data "aws_availability_zones" "available" {
 state = "available"
 }
 
+provider "aws" {
+  region = "${var.aws_region}"
+}
+
 resource "aws_vpc" "tf_vpc" {
 cidr_block = "${var.vpc_cidr}"
 enable_dns_hostnames = true
@@ -257,6 +261,9 @@ resource "aws_db_instance" "default" {
   password               = "${var.password}"
   vpc_security_group_ids = ["${aws_security_group.tf_public_sg.id}"]
   db_subnet_group_name   = "${aws_db_subnet_group.default.id}"
+  final_snapshot_identifier = "mysql-backup"
+  skip_final_snapshot    = true
+
 }
 
 resource "aws_db_subnet_group" "default" {
