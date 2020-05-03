@@ -12,7 +12,7 @@
 
 Prerequisites:
 1) AWS cli should be configured with your access and secret keys
-2) aws - ami is choosen to be us-east-1 , kindly configure the same region
+2) aws - ami is chosen to be us-east-1 , kindly configure the same region
 3) you should at least have 1 pem  key created by your user
 4) install terraform
 
