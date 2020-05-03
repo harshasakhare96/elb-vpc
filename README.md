@@ -1,7 +1,7 @@
 # elb-vpc
  WHAT WILL BE THE RESULTS??
         
-        1) It will create a one VPC
+        1) It will create a  VPC
         2) It will create 4 subnets 2 private 2 public
         3) It will create a route table , IG, EIP,NAT and a SG 
         4) It will create one RDS in private subnet
